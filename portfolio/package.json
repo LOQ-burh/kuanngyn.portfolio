@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "i:frozen": "pnpm i --frozen-lockfile"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -23,5 +24,8 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
     "@eslint/eslintrc": "^3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["sharp"]
   }
 }
