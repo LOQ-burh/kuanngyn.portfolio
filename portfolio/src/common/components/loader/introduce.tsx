@@ -5,15 +5,24 @@ import { gsap, Expo } from "gsap";
 import styled from "styled-components";
 
 export const IntroduceLoad = ({ setLoading }: {setLoading: Dispatch<SetStateAction<boolean>>}) => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] : [
+    number,
+    Dispatch<SetStateAction<number>>
+  ] = useState(0);
   useEffect(() => {
     const count = setInterval(() => {
-      setCounter((counter) =>
-        counter < 100
-          ? counter + 1
-          : (clearInterval(count), setCounter(100), reveal())
-      );
+      setCounter((counter: number) => {
+        if(counter < 100) {
+            return counter + 1
+        } else {
+            clearInterval(count);
+            setCounter(100);
+            reveal();
+            return counter;
+        }
+      });
     }, 25);
+    return () => clearInterval(count);
   }, []);
 
   async function reveal() {
