@@ -81,7 +81,10 @@ jobs:
             # ${{ runner.os }}-nextjs-${{ hashFiles('portfolio**/package-lock.json', 'portfolio/**/yarn.lock', 'portfolio/**/pnpm-lock.yaml') }}-
 
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: |
+          cd portfolio
+          ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
       - name: Build with Next.js
         run: |
           cd portfolio
