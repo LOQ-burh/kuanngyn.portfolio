@@ -73,7 +73,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            .next/cache
+            portfolio/.next/cache
           # Generate a new cache whenever packages or source files change.
           key: ${{ runner.os }}-nextjs-${{ hashFiles('portfolio/**/package-lock.json', 'portfolio/**/yarn.lock', 'portfolio/**/pnpm-lock.yaml') }}-${{ hashFiles('portfolio/**.[jt]s', 'portfolio/**.[jt]sx') }}
           # If source files changed but packages didn't, rebuild from a prior cache.
