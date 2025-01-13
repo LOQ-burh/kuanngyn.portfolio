@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
     ],
     scrollRestoration: true,
   },
+  output: 'export',
 }
 
 export default nextConfig;
