@@ -89,6 +89,7 @@ jobs:
         run: |
           cd portfolio
           ${{ steps.detect-package-manager.outputs.runner }} next build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
