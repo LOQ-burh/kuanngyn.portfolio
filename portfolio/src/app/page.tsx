@@ -4,8 +4,6 @@ import { IntroduceLoad } from "@/common/components/loader";
 import Image from "next/image";
 import { useState } from "react";
 
-import { CursorGlobal } from "@/common/components/cursor";
-
 export default function Home() {
 const [loading, setLoading] = useState(true);
   return loading 
@@ -107,7 +105,6 @@ const [loading, setLoading] = useState(true);
         </a>
       </footer>
     </div>
-    <CursorGlobal />
     </>
   );
 }
