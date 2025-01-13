@@ -56,6 +56,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
+          cache-dependency-path: portfolio/pnpm-lock.yaml
           node-version: "22"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
