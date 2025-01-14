@@ -1,0 +1,16 @@
+{
+    "LocaleSwitcher": {
+        "label": "Đổi ngôn ngữ",
+        "locale": "{locale, select, de {vi Vietnam} en {🇺🇸 English} other {Unknown}}"
+    },
+    "Header": {
+        "labelHome": "Trang chủ",
+        "pathnameHome": "",
+        "labelAboutUs": "Về chúng tôi",
+        "pathnameAboutUs": "",
+        "labelProjects": "Dự án",
+        "pathnameProjects": "",
+        "labelContact": "Liên hệ",
+        "pathnameContact": ""
+    }
+}

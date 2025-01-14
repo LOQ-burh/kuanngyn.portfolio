@@ -1,0 +1,16 @@
+{
+    "LocaleSwitcher": {
+        "label": "Change language",
+        "locale": "{locale, select, de {vi Vietnam} en {🇺🇸 English} other {Unknown}}"
+    },
+    "Header": {
+        "labelHome": "Home",
+        "pathnameHome": "",
+        "labelAboutUs": "About us",
+        "pathnameAboutUs": "",
+        "labelProjects": "Projects",
+        "pathnameProjects": "",
+        "labelContact": "Contact",
+        "pathnameContact": ""
+    }
+}
