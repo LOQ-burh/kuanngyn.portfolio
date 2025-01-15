@@ -5,10 +5,6 @@ import { getMessages } from 'next-intl/server';
 import { ReactNode } from 'react';
 import { StyledComponentsRegistry } from '@/common/configs';
 import { CursorGlobal } from '../atoms/cursor';
-import { Header } from '../organisms/header';
-import { ShareSocial } from '../molecules/shareSocial';
-import { Footer } from '../organisms/footer';
-import { PageLayoutPortfolio } from './pageLayoutPortfolio';
 
 const geistSans = Geist({
     variable: "--font-geist-sans",

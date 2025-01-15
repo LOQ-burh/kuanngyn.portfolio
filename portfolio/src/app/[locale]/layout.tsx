@@ -1,9 +1,9 @@
 
 
 import { BaseLayout } from "@/common/components/templates";
-import { routing } from "@/common/i18n/routes";
+import { Locale, routing } from "@/common/i18n/routes";
 import type { Metadata, Viewport } from "next";
-import {getTranslations, setRequestLocale} from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { notFound } from "next/navigation";
 
 import "../globals.css";
@@ -50,7 +50,7 @@ export default async function LocaleLayout({
 }>) {
     const { locale } = await Promise.resolve(params);
     // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
 
