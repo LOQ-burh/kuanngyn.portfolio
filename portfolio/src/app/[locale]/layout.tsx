@@ -3,7 +3,6 @@
 import { BaseLayout } from "@/common/components/templates";
 import { Locale, routing } from "@/common/i18n/routes";
 import type { Metadata, Viewport } from "next";
-import { setRequestLocale } from 'next-intl/server';
 import { notFound } from "next/navigation";
 
 import "../globals.css";
@@ -41,23 +40,21 @@ export const viewport: Viewport = {
     ],
 }
 
-type Props = {
+interface RootLayoutProps {
     children: React.ReactNode;
-    params: Promise<{ locale: string }>;
-}
+    params: Promise<{ locale: string; }>;
+  }
 
 export default async function LocaleLayout({
     children,
-    params
-}: Props) {
-    const { locale } = await  params;
-    // Ensure that the incoming `locale` is valid
+    params,
+}: Readonly<RootLayoutProps>) {
+
+    const { locale } = await params;
+
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
-
-  // Enable static rendering
-  setRequestLocale(locale);
   
   return <BaseLayout locale={locale}>{children}</BaseLayout>;
 }
