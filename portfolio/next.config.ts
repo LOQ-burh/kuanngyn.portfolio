@@ -53,7 +53,7 @@ const nextConfig: NextConfig = {
     webpackBuildWorker: true,
     webpackMemoryOptimizations: true
   },
-  output: 'export'
+//   output: 'export'
 }
 
 export default withNextIntl(nextConfig);
