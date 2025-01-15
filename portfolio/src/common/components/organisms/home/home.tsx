@@ -3,8 +3,8 @@ import { useTranslations } from "next-intl";
 export function IntroPage() {
     const t = useTranslations('HomePage');
     return (
-        <div className="flex grow justify-center items-center min-h-[72vh]">
-            <div className="container relative flex grow flex-col">
+        <div className="flex justify-center items-center w-[1222px] min-h-[72vh]">
+            <div className="container relative flex flex-col">
                 <h1 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
                     {t('title')}
                 </h1>
