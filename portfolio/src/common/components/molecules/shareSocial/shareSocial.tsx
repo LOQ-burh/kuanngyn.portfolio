@@ -8,8 +8,8 @@ export function ShareSocial() {
             <ul data-aos="fade-up" className={styles.list}>
                 <li>
                     <a
-                        href="https://github.com/nhanng19"
-                        aria-label="Github"
+                        href="https://www.facebook.com/mih.kuanUT"
+                        aria-label="Facebook"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -18,7 +18,7 @@ export function ShareSocial() {
                 </li>
                 <li>
                     <a
-                        href="https://gitlab.com/nhanng19"
+                        href="https://github.com/LOQ-burh"
                         aria-label="Github"
                         target="_blank"
                         rel="noreferrer"
