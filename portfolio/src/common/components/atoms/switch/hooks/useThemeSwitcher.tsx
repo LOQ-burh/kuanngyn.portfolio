@@ -19,7 +19,7 @@ export const useThemeSwitcher = () : [string, Dispatch<SetStateAction<string>>] 
                document.documentElement.classList.remove('dark');
             }
          } else {
-            let check = mediaQuery.matches ? 'dark' : 'light';
+            const check = mediaQuery.matches ? 'dark' : 'light';
             setDarkMode(check);
             window.localStorage.setItem('theme', check);
 
