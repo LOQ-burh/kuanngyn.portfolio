@@ -6,6 +6,10 @@ export const routing = defineRouting({
   defaultLocale: 'en',
   pathnames: {
     '/': '/',
+    '/blog': {
+      en: '/blog',
+      vi: '/blog'
+    },
     '/pathnames': {
       en: '/pathnames',
       vi: '/duong-dan'

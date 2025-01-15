@@ -1,14 +1,17 @@
 "use client";
 
-import { useState, useEffect, Dispatch, SetStateAction } from "react";
+import { useState, useEffect, Dispatch, SetStateAction, JSX } from "react";
 import { gsap, Expo } from "gsap";
 import { AppContainer, Loading, Follow, ProgressBar, Content } from "./styled";
 
-export const IntroduceLoad = ({ setLoading }: {setLoading: Dispatch<SetStateAction<boolean>>}) => {
-  const [counter, setCounter] : [
-    number,
-    Dispatch<SetStateAction<number>>
-  ] = useState(0);
+interface SetStateLoading {
+    setLoading: Dispatch<SetStateAction<boolean>>
+}
+
+export function IntroduceLoad ({ 
+    setLoading 
+}: SetStateLoading) {
+  const [counter, setCounter] = useState(0);
   useEffect(() => {
     const count = setInterval(() => {
       setCounter((counter: number) => {

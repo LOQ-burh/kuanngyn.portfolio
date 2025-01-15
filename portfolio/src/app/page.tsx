@@ -1,12 +1,6 @@
-"use client";
+import {redirect} from 'next/navigation';
 
-import { IntroduceLoad } from "@/common/components/molecules/loader";
-import { IntroPage } from "@/common/components/pages/home";
-import { useState } from "react";
-
-export default function Home() {
-const [loading, setLoading] = useState(true);
-  return loading 
-  ? ( <IntroduceLoad setLoading={setLoading}/> )
-  : ( <IntroPage/> );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect('/en');
 }

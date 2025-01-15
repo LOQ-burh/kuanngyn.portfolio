@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./src/common/i18n/request.ts');
 
 const sassOptions = {
   additionalData: `
@@ -49,12 +52,7 @@ const nextConfig: NextConfig = {
     parallelServerBuildTraces: true,
     webpackBuildWorker: true,
     webpackMemoryOptimizations: true
-  },
-  i18n: {
-      defaultLocale: 'en-US',
-      locales: ['en-US', 'vi']
-  },
-//   output: 'export',
+  }
 }
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
