@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Dispatch, SetStateAction, JSX } from "react";
+import { useState, useEffect, Dispatch, SetStateAction } from "react";
 import { gsap, Expo } from "gsap";
 import { AppContainer, Loading, Follow, ProgressBar, Content } from "./styled";
 
