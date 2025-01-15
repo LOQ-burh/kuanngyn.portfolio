@@ -1,6 +1,6 @@
 import { LineFullWidth } from "../../atoms/line";
-import { LocaleSwitcher } from "../../atoms/switch";
 import { Brand } from "../../molecules/brand";
+import { GroupSwitcherHeader } from "../../molecules/groupSwitcher";
 import { Navigation } from "../../molecules/navigation";
 
 export function Header() {
@@ -11,7 +11,7 @@ export function Header() {
                     <nav className="container flex justify-between p-2 text-white">
                         <Brand />
                         <Navigation />
-                        <LocaleSwitcher />
+                        <GroupSwitcherHeader />
                     </nav>
                 </div>
             </div>
