@@ -34,3 +34,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Atomic design
+
+![Atomic](image.png)
+
+1. Atoms: The most basic UI elements, such as buttons, text inputs, headings, colors, and typography. Atoms don’t have meaning on their own but serve as building blocks for more complex components.
+2. Molecules: Combinations of atoms forming larger components, like simple forms, small navbars, or info cards.
+3. Organisms: Collections of molecules that form more complex UI sections with specific functions, such as headers, footers, or sidebars.
+4. Templates: Page structures showing how components are arranged to form different layouts.
+Pages: Concrete implementations of templates with actual content.

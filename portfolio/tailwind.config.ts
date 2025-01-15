@@ -9,10 +9,14 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+        backgroundImage: {},
+        colors: {
+          background: "var(--background)",
+          foreground: "var(--foreground)",
+        },
+        fontFamily: {
+          bebas: ["Bebas Neue", "sans-serif"],
+        },
     },
   },
   plugins: [],

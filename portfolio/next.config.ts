@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./src/common/i18n/request.ts');
 
 const sassOptions = {
   additionalData: `
@@ -6,30 +9,50 @@ const sassOptions = {
   `,
 }
 
-const nextConfig: NextConfig = {
-  sassOptions: {
-    ...sassOptions,
-    implementation: 'sass-embedded',
-  },
-  compiler: {
-    styledComponents: true,
-  },
-  productionBrowserSourceMaps: true,
-  onDemandEntries: {
-    maxInactiveAge: 30 * 1000, 
-    pagesBufferLength: 5, 
-  },
-  experimental: {
-    // reactCompiler: true,
-    optimizeCss: true,
+const experimental = {
     optimizePackageImports: [
         'framer-motion',
         '@gsap/react',
         'gsap'
     ],
-    scrollRestoration: true,
-  },
-  output: 'export',
+    serverActions: {
+        allowedOrigins: []
+    }
 }
 
-export default nextConfig;
+const compiler = { }
+
+const onDemandEntries = { }
+
+const nextConfig: NextConfig = {
+  cleanDistDir: true,
+  sassOptions: {
+    ...sassOptions,
+    implementation: 'sass-embedded',
+  },
+  compiler: {
+    ...compiler,
+    styledComponents: true,
+  },
+  productionBrowserSourceMaps: true,
+  onDemandEntries: {
+    ...onDemandEntries,
+    maxInactiveAge: 30 * 1000, 
+    pagesBufferLength: 5, 
+  },
+  experimental: {
+    ...experimental,
+    authInterrupts: true,
+    inlineCss: true,
+    optimizeCss: true,
+    optimizeServerReact: true,
+    scrollRestoration: true,
+    nextScriptWorkers: true,
+    parallelServerCompiles: true,
+    parallelServerBuildTraces: true,
+    webpackBuildWorker: true,
+    webpackMemoryOptimizations: true
+  }
+}
+
+export default withNextIntl(nextConfig);

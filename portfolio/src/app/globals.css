@@ -2,6 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/green.css";
+@import "@radix-ui/colors/red.css";
+@import "@radix-ui/colors/gray-dark.css";
+@import "@radix-ui/colors/blue-dark.css";
+@import "@radix-ui/colors/green-dark.css";
+@import "@radix-ui/colors/red-dark.css";
+
+/* Accent Scale */
+.dark, .dark-theme {
+  --blue-1: #0c111c;
+  --blue-2: #111725;
+  --blue-3: #172448;
+  --blue-4: #1d2e61;
+  --blue-5: #243974;
+  --blue-6: #2d4484;
+  --blue-7: #375098;
+  --blue-8: #405eb2;
+  --blue-9: #3d63dd;
+  --blue-10: #3f5cb0;
+  --blue-11: #93b4ff;
+  --blue-12: #d5e2ff;
+ 
+  --blue-a1: #0012fb0c;
+  --blue-a2: #1156f916;
+  --blue-a3: #2b64ff3b;
+  --blue-a4: #3567ff56;
+  --blue-a5: #3f71fd6b;
+  --blue-a6: #4b7afd7c;
+  --blue-a7: #5480ff91;
+  --blue-a8: #5783ffad;
+  --blue-a9: #4571ffdb;
+  --blue-a10: #5580feab;
+  --blue-a11: #93b4ff;
+  --blue-a12: #d5e2ff;
+ 
+  --blue-contrast: #fff;
+  --blue-surface: #111d3980;
+  --blue-indicator: #3d63dd;
+  --blue-track: #3d63dd;
+}
+  
+/* @supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark, .dark-theme {
+      --blue-1: oklch(17.8% 0.0247 266.8);
+      --blue-2: oklch(20.7% 0.0302 266.8);
+      --blue-3: oklch(27.1% 0.0694 266.8);
+      --blue-4: oklch(31.8% 0.0933 266.8);
+      --blue-5: oklch(36.1% 0.1046 266.8);
+      --blue-6: oklch(40.4% 0.1106 266.8);
+      --blue-7: oklch(45% 0.1203 266.8);
+      --blue-8: oklch(50.3% 0.1373 266.8);
+      --blue-9: oklch(54.3% 0.1913 266.8);
+      --blue-10: oklch(49.7% 0.1373 266.8);
+      --blue-11: oklch(77.7% 0.1234 266.8);
+      --blue-12: oklch(91.1% 0.0428 266.8);
+
+      --blue-a1: color(display-p3 0 0.0706 0.9804 / 0.043);
+      --blue-a2: color(display-p3 0.1176 0.3608 1 / 0.08);
+      --blue-a3: color(display-p3 0.2275 0.4039 1 / 0.223);
+      --blue-a4: color(display-p3 0.2627 0.4196 1 / 0.324);
+      --blue-a5: color(display-p3 0.302 0.451 1 / 0.4);
+      --blue-a6: color(display-p3 0.3451 0.4902 1 / 0.467);
+      --blue-a7: color(display-p3 0.3725 0.5098 1 / 0.547);
+      --blue-a8: color(display-p3 0.3843 0.5255 1 / 0.652);
+      --blue-a9: color(display-p3 0.3176 0.451 1 / 0.824);
+      --blue-a10: color(display-p3 0.3843 0.5176 1 / 0.643);
+      --blue-a11: color(display-p3 0.6196 0.7216 1 / 0.975);
+      --blue-a12: color(display-p3 0.8549 0.898 1 / 0.988);
+
+      --blue-contrast: #fff;
+      --blue-surface: color(display-p3 0.0706 0.1098 0.2118 / 0.5);
+      --blue-indicator: oklch(54.3% 0.1913 266.8);
+      --blue-track: oklch(54.3% 0.1913 266.8);
+    }
+  }
+} */
+
+/* Background color */
+/* .dark, .dark-theme, :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
+  --color-background: #111;
+} */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,13 +104,18 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #d5e2ff;
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* background: var(--background); */
+  background: rgb(12,17,28);
+  background: -moz-linear-gradient(0deg, rgba(12,17,28,1) 0%, rgba(23,36,72,1) 80%);
+  background: -webkit-linear-gradient(0deg, rgba(12,17,28,1) 0%, rgba(23,36,72,1) 80%);
+  background: linear-gradient(0deg, rgba(12,17,28,1) 0%, rgba(23,36,72,1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0c111c",endColorstr="#172448",GradientType=1);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -67,7 +157,8 @@ body {
 }
 
 /* =============== Cursor =============== */
-/* .auto            { cursor: auto; }
+/* 
+.auto            { cursor: auto; }
 .default         { cursor: default; }
 .none            { cursor: none; }
 .context-menu    { cursor: context-menu; }
@@ -98,6 +189,7 @@ body {
 .se-resize       { cursor: se-resize; }
 .sw-resize       { cursor: sw-resize; }
 .nesw-resize     { cursor: nesw-resize; }
-.nwse-resize     { cursor: nwse-resize; } */
+.nwse-resize     { cursor: nwse-resize; } 
+*/
 /* =============== Cursor =============== */
 
