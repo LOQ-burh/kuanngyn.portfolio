@@ -52,7 +52,8 @@ const nextConfig: NextConfig = {
     parallelServerBuildTraces: true,
     webpackBuildWorker: true,
     webpackMemoryOptimizations: true
-  }
+  },
+  output: 'export'
 }
 
 export default withNextIntl(nextConfig);
