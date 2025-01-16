@@ -13,7 +13,8 @@ const experimental = {
     optimizePackageImports: [
         'framer-motion',
         '@gsap/react',
-        'gsap'
+        'gsap',
+        '@radix-ui/themes'
     ],
     serverActions: {
         allowedOrigins: []

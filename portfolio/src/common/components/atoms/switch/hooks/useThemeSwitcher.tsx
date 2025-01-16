@@ -1,8 +1,11 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
-export const useThemeSwitcher = () : [string, Dispatch<SetStateAction<string>>]  => {
+export const useThemeSwitcher = () : [
+    string, 
+    Dispatch<SetStateAction<string>>
+]  => {
    const preferDarkQuery = '(prefers-color-scheme: dark)';
-   const [darkMode, setDarkMode] = useState<'dark' | 'light' | string>('dark');
+   const [darkMode, setDarkMode] = useState('');
 
    useEffect(() => {
       const mediaQuery = window.matchMedia(preferDarkQuery);
