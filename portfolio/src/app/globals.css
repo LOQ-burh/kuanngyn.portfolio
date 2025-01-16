@@ -97,25 +97,41 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: rgb(253,251,251);
+    --background-1: -moz-linear-gradient(120deg, rgba(253,251,251,1) 0%, rgba(235,237,238,1) 100%);
+    --background-2: -webkit-linear-gradient(120deg, rgba(253,251,251,1) 0%, rgba(235,237,238,1) 100%);
+    --background-3: linear-gradient(120deg, rgba(253,251,251,1) 0%, rgba(235,237,238,1) 100%);
+    --filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdfbfb",endColorstr="#ebedee",GradientType=1);
+    --foreground: #171717;
+    --border-color: rgb(12, 17, 28);
 }
 
-@media (prefers-color-scheme: dark) {
+/* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: rgb(12,17,28);
     --foreground: #d5e2ff;
   }
+} */
+
+.dark {
+  --background: rgb(12, 17, 28);
+  --background-1: -moz-linear-gradient(0deg, rgba(12,17,28,1) 0%, rgba(23,36,72,1) 80%);
+  --background-2: -webkit-linear-gradient(0deg, rgba(12,17,28,1) 0%, rgba(23,36,72,1) 80%);
+  --background-3: linear-gradient(0deg, rgba(12,17,28,1) 0%, rgba(23,36,72,1) 80%);
+  --filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0c111c",endColorstr="#172448",GradientType=1);
+  --foreground: #d5e2ff;
+  --border-color: rgb(253,251,251);
 }
 
 body {
   color: var(--foreground);
-  /* background: var(--background); */
-  background: rgb(12,17,28);
-  background: -moz-linear-gradient(0deg, rgba(12,17,28,1) 0%, rgba(23,36,72,1) 80%);
-  background: -webkit-linear-gradient(0deg, rgba(12,17,28,1) 0%, rgba(23,36,72,1) 80%);
-  background: linear-gradient(0deg, rgba(12,17,28,1) 0%, rgba(23,36,72,1) 80%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0c111c",endColorstr="#172448",GradientType=1);
+  background: var(--background);
+  background: var(--background-1);
+  background: var(--background-2);
+  background: var(--background-3);
+  filter: var(--filter);
+  border-color: var(--border-color);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -192,4 +208,3 @@ body {
 .nwse-resize     { cursor: nwse-resize; } 
 */
 /* =============== Cursor =============== */
-
