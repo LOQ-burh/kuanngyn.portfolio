@@ -54,7 +54,7 @@ const nextConfig: NextConfig = {
         webpackBuildWorker: true,
         webpackMemoryOptimizations: true
     },
-    //   output: 'export'
+    output: 'export'
     // i18n: {
     //     locales: ['en', 'vi'],
     //     defaultLocale: 'en',
