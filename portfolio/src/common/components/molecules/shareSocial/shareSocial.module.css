@@ -8,7 +8,7 @@
 .list::after {
   content: "";
   display: block;
-  background-color: white;
+  background-color: var(--background);
   width: 2px;
   height: 5rem
 }

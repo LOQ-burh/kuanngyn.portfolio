@@ -37,7 +37,7 @@ export default {
             }
           },
           animation: {
-            typing: "typing 4s steps(28) infinite alternate, blink 1s infinite"
+            typing: "typing 4.8s steps(32) infinite alternate, blink 0.8s infinite"
           }
         },
   },
