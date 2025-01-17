@@ -55,5 +55,36 @@
         "pathnameContact": "/contact",
         "labelBlog": "Blog",
         "pathnameBlog": "/blog"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "loggingNotification": {
+        "fullNameFormContact": "Tên đầy đủ là bắt buộc",
+        "emailFormContact": "Email là bắt buộc",
+        "phoneFormContact": "Số điện thoại là bắt buộc",
+        "messageFormContact": "Nội dung tin nhắn là bắt buộc"
     }
 }

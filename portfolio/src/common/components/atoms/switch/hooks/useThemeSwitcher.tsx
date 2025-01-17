@@ -5,7 +5,7 @@ export const useThemeSwitcher = () : [
     Dispatch<SetStateAction<string>>
 ]  => {
    const preferDarkQuery = '(prefers-color-scheme: dark)';
-   const [darkMode, setDarkMode] = useState('');
+   const [darkMode, setDarkMode] = useState('dark');
 
    useEffect(() => {
       const mediaQuery = window.matchMedia(preferDarkQuery);

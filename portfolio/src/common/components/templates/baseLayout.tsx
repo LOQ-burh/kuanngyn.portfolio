@@ -35,8 +35,6 @@ export async function BaseLayout({
     return (
         <html lang={locale}>
             <body className={clsx(geistSans.variable, geistMono.variable)}>
-                    {/* <Theme accentColor="crimson" grayColor="sand" radius="large" scaling="95%">
-                    </Theme> */}
                     <div className='flex w-full flex-col min-h-[100vh]'>
                         <NextIntlClientProvider messages={messages}>
                             <StyledComponentsRegistry>

@@ -9,7 +9,7 @@ export function Navigation() {
             <NavigationLink href="/">{t('labelhome')}</NavigationLink>
             <NavigationLink href="/">{t('labelAboutUs')}</NavigationLink>
             <NavigationLink href="/">{t('labelProjects')}</NavigationLink>
-            <NavigationLink href="/">{t('labelContact')}</NavigationLink>
+            <NavigationLink href="/contact">{t('labelContact')}</NavigationLink>
             <NavigationLink href="/blog">{t('labelBlog')}</NavigationLink>
         </div>
     );

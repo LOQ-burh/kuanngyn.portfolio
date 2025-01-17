@@ -56,5 +56,9 @@ export default async function LocaleLayout({
     notFound();
   }
   
-  return <BaseLayout locale={locale}>{children}</BaseLayout>;
+  return (
+    <BaseLayout locale={locale}>
+        {children}
+    </BaseLayout>
+  );
 }
