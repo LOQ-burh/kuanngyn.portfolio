@@ -59,9 +59,14 @@ export function IntroduceLoad ({
           id="progress-bar"
           style={{ width: counter + "%" }}
         ></ProgressBar>
+        
       </Loading>
-
-      <Content className="content"></Content>
+      
+      <Content className="content">
+      <div className="w-full h-full flex justify-center items-center text-3xl">
+        WELCOME
+        </div>
+      </Content>
     </AppContainer>
   );
 };

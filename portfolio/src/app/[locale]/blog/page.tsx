@@ -1,7 +1,5 @@
-function BlogHome() {
+export default function BlogHome() {
     return ( 
-        <></>
+        <>Blog</>
      );
 }
-
-export default BlogHome;

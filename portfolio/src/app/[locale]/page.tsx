@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { IntroduceLoad } from '@/common/components/molecules/loader';
 import { IntroPage } from '@/common/components/organisms/home';
 import { PageLayoutPortfolio } from '@/common/components/templates';
+// import { ContactPage } from '@/common/components/organisms/contact';
 
 export default function HomePage() {
     const [loading, setLoading] = useState(true);
@@ -13,6 +14,7 @@ export default function HomePage() {
         : (
             <PageLayoutPortfolio>
                 <IntroPage />
+                {/* <ContactPage /> */}
             </PageLayoutPortfolio>
         );
 }

@@ -11,10 +11,11 @@ const sassOptions = {
 
 const experimental = {
     optimizePackageImports: [
-        'framer-motion',
         '@gsap/react',
         'gsap',
-        '@radix-ui/themes'
+        '@radix-ui/themes',
+        '@radix-ui/react-form',
+        '@radix-ui/colors'
     ],
     serverActions: {
         allowedOrigins: []
@@ -54,7 +55,7 @@ const nextConfig: NextConfig = {
         webpackBuildWorker: true,
         webpackMemoryOptimizations: true
     },
-    output: 'export'
+    // output: 'export'
     // i18n: {
     //     locales: ['en', 'vi'],
     //     defaultLocale: 'en',

@@ -10,10 +10,22 @@ export const routing = defineRouting({
       en: '/blog',
       vi: '/blog'
     },
+    '/contact': {
+      en: '/contact',
+      vi: '/lien-he'
+    },
+    '/projects': {
+      en: '/projects',
+      vi: '/du-an'
+    },
+    '/about': {
+      en: '/about',
+      vi: '/about'
+    },
     '/pathnames': {
       en: '/pathnames',
       vi: '/duong-dan'
-    }
+    },
   }
 });
 

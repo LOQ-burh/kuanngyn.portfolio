@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/common/utils";
 import { MoonIcon, SunIcon } from "../icons";
 import { useThemeSwitcher } from "./hooks";
 
@@ -13,9 +14,11 @@ export function ThemeSwitcher() {
    return (
       <button
          onClick={handleThemeMode}
-         className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+         className={cn(
+            `ml-3 flex items-center justify-center rounded-full p-1 ${
             darkMode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-         }`}
+         }`,
+         )}
       >
          {darkMode === "dark" ? (
             <SunIcon className="w-full h-auto fill-dark" />

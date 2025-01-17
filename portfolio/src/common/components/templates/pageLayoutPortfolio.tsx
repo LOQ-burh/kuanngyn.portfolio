@@ -12,8 +12,10 @@ export function PageLayoutPortfolio({ children }: Props) {
         <>
             <Header />
             <ShareSocial />
-            <div className="w-full flex justify-center items-start">
-                {children}
+            <div className="flex justify-center items-start">
+                <div className="flex justify-center flex-col items-center w-[1222px] min-h-[72vh]">
+                    {children}
+                </div>
             </div>
             {/* <Footer /> */}
         </>
