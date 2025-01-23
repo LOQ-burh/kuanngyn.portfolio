@@ -1,5 +1,10 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from 'next-intl/plugin';
+import createBundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = createBundleAnalyzer({
+    enabled: process.env.ANALYZE === 'true',
+})
 
 const withNextIntl = createNextIntlPlugin('./src/common/i18n/request.ts');
 
@@ -62,4 +67,9 @@ const nextConfig: NextConfig = {
     // },
 }
 
-export default withNextIntl(nextConfig);
+export default
+    withBundleAnalyzer(
+        withNextIntl(
+            nextConfig
+        )
+    )

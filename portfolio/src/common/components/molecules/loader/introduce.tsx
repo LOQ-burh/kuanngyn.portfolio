@@ -26,7 +26,7 @@ export function IntroduceLoad ({
       });
     }, 25);
     return () => clearInterval(count);
-  }, []);
+  }, [reveal]);
 
   async function reveal() {
     const t1 =  gsap.timeline({});
