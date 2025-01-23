@@ -30,7 +30,7 @@ export const sendDiscordMessage = async (formData: FormData) => {
                 ],
             }),
         })
-    } catch (err: any) {
-        console.log(err.message);
+    } catch (err) {
+        console.log(err);
     }
 };
