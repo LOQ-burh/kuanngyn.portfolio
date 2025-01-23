@@ -1,11 +1,9 @@
-// import { Theme } from "@radix-ui/themes";
 import { clsx } from 'clsx';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { ReactNode } from 'react';
 import { StyledComponentsRegistry } from '@/common/configs';
-import { CursorGlobal } from '../atoms/cursor';
 
 import "@radix-ui/themes/styles.css";
 
@@ -40,7 +38,6 @@ export async function BaseLayout({
                             <StyledComponentsRegistry>
                                 {children}
                             </StyledComponentsRegistry>
-                            <CursorGlobal />
                         </NextIntlClientProvider>
                     </div>
             </body>
